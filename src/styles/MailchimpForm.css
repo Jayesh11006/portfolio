@@ -1,0 +1,28 @@
+.mailchimp-form {
+    background-color: #f0f0f0;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .mailchimp-form input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .mailchimp-form button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .mailchimp-form button:hover {
+    background-color: #ffffff;
+  }
+  

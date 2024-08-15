@@ -1,0 +1,12 @@
+/* CSS for the logo */
+.navbar-brand img {
+    border-radius: 50%;
+    opacity: 0.9;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+  }
+  
+  /* CSS for the logo hover effect */
+  .navbar-brand img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust shadow parameters as needed */
+  }
+  
