@@ -30,15 +30,15 @@ const CircleCard = ({ percentage, label }) => {
         >
           <defs>
             <linearGradient id="GradientColor">
-              <stop offset="0%" stop-color="#e91e63" />
-              <stop offset="100%" stop-color="#673ab7" />
+              <stop offset="0%" stopColor="#e91e63" />
+              <stop offset="100%" stopColor="#673ab7" />
             </linearGradient>
           </defs>
           <circle
             cx="80"
             cy="80"
             r="70"
-            stroke-linecap="round"
+            strokeLinecap="round"
             fill="none"
             stroke="url(#GradientColor)"
             strokeWidth="20px"
@@ -65,16 +65,19 @@ const CircleCards = () => {
   ];
 
   return (
-    <div style={styles.cover}>
+    <div id="skills" style={styles.cover}>
       <div style={styles.blurredBackground}></div>
-      <div style={styles.cardContainer}>
-        {circlesData.map((circle, index) => (
-          <CircleCard
-            key={index}
-            percentage={circle.percentage}
-            label={circle.label}
-          />
-        ))}
+      <div style={styles.content}>
+        <h1 style={styles.heading}>Skill</h1>
+        <div style={styles.cardContainer}>
+          {circlesData.map((circle, index) => (
+            <CircleCard
+              key={index}
+              percentage={circle.percentage}
+              label={circle.label}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -100,10 +103,21 @@ const styles = {
     filter: 'blur(10px)',
     zIndex: 1,
   },
+  content: {
+    position: 'relative',
+    zIndex: 2,
+    textAlign: 'center',
+  },
+  heading: {
+    color: 'white',
+    marginBottom: '20px',
+    fontSize: '2rem',
+  },
   cardContainer: {
     display: 'flex',
     gap: '20px',
-    zIndex: 2,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   card: {
     width: '200px',
